@@ -1,25 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
     <data>
         <variable
             name="viewModel"
             type="com.e.a5eceviri.ui.main.MainViewModel" />
     </data>
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
-        xmlns:tools="http://schemas.android.com/tools"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".ui.main.MainActivity">
 
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Hello World!"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="200dp"
+            android:gravity="center"
+            android:id="@+id/maintext"
+            android:textColor="#000"
+            android:text="5eÇeviri \n Dungeon and Dragons Türkçe Rehber" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <Button
+            android:id="@+id/mainrace"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/maintext"
+            android:onClick="@{(v)->viewModel.irklar(v)}"
+            android:layout_marginTop="30dp"
+            android:layout_marginLeft="100dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:text="Irklar" />
+
+        <Button
+            android:id="@+id/mainclass"
+            android:layout_width="wrap_content"
+            android:layout_below="@id/maintext"
+            android:onClick="@{(v)->viewModel.sınıflar(v)}"
+            android:layout_toRightOf="@id/mainrace"
+            android:layout_marginLeft="20dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content"
+            android:text="Sınıflar" />
+
+        <Button
+            android:id="@+id/mainbackground"
+            android:layout_below="@id/mainclass"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:onClick="@{(v)->viewModel.gecmis(v)}"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Geçmiş" />
+
+        <Button
+            android:id="@+id/mainitems"
+            android:layout_below="@id/mainrace"
+            android:onClick="@{(v)->viewModel.esyalar(v)}"
+            android:layout_toRightOf="@id/mainbackground"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Eşyalar" />
+        <Button
+            android:id="@+id/mainmenu1"
+            android:layout_below="@id/mainbackground"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+        <Button
+            android:id="@+id/mainmenu2"
+            android:layout_below="@id/mainitems"
+            android:layout_toRightOf="@id/mainbackground"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Button" />
+
+    </RelativeLayout>
 </layout>
