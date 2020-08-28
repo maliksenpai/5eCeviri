@@ -29,7 +29,7 @@
             android:id="@+id/mainrace"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/maintext"
+            android:layout_below="@+id/maintext"
             android:onClick="@{(v)->viewModel.irklar(v)}"
             android:layout_marginTop="30dp"
             android:layout_marginLeft="100dp"
@@ -40,7 +40,7 @@
         <Button
             android:id="@+id/mainclass"
             android:layout_width="wrap_content"
-            android:layout_below="@id/maintext"
+            android:layout_below="@+id/maintext"
             android:onClick="@{(v)->viewModel.sınıflar(v)}"
             android:layout_toRightOf="@id/mainrace"
             android:layout_marginLeft="20dp"
@@ -52,7 +52,7 @@
 
         <Button
             android:id="@+id/mainbackground"
-            android:layout_below="@id/mainclass"
+            android:layout_below="@+id/mainclass"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="20dp"
             android:onClick="@{(v)->viewModel.gecmis(v)}"
@@ -64,7 +64,7 @@
 
         <Button
             android:id="@+id/mainitems"
-            android:layout_below="@id/mainrace"
+            android:layout_below="@+id/mainrace"
             android:onClick="@{(v)->viewModel.esyalar(v)}"
             android:layout_toRightOf="@id/mainbackground"
             android:layout_marginLeft="20dp"
@@ -76,7 +76,7 @@
             android:text="Eşyalar" />
         <Button
             android:id="@+id/mainmenu1"
-            android:layout_below="@id/mainbackground"
+            android:layout_below="@+id/mainbackground"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
@@ -86,7 +86,7 @@
             android:text="Button" />
         <Button
             android:id="@+id/mainmenu2"
-            android:layout_below="@id/mainitems"
+            android:layout_below="@+id/mainitems"
             android:layout_toRightOf="@id/mainbackground"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="20dp"
