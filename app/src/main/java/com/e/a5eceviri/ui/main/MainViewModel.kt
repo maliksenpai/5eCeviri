@@ -1,9 +1,10 @@
 package com.e.a5eceviri.ui.main
 
 import android.content.Intent
+import android.util.Log
 import android.view.View
 import com.e.a5eceviri.ui.base.BaseViewModel
-import com.e.a5eceviri.ui.classes.ClassActivity
+import com.e.a5eceviri.ui.classes.classlist.ClassActivity
 import com.e.a5eceviri.ui.races.RaceActivity
 
 class MainViewModel : BaseViewModel() {
@@ -17,7 +18,8 @@ class MainViewModel : BaseViewModel() {
     }
     fun sınıflar(v:View){
         var context = v.context
-        context.startActivity(Intent(context,ClassActivity::class.java))
+        context.startActivity(Intent(context,
+            ClassActivity::class.java))
     }
     fun esyalar(v:View){
 
