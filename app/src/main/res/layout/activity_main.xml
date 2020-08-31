@@ -39,11 +39,7 @@
             android:id="@+id/mainclass"
             android:layout_width="wrap_content"
             android:layout_below="@+id/maintext"
-<<<<<<< HEAD
-            android:onClick="@{(v)->viewModel.sınıflar(v)}"
-=======
             android:onClick="@{(v) -> viewModel.sınıflar(v)}"
->>>>>>> malik
             android:layout_toRightOf="@id/mainrace"
             android:layout_marginLeft="20dp"
             android:background="@color/colorPrimary"
