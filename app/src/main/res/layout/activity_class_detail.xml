@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="modelView"
+            type="com.e.a5eceviri.ui.classes.classdetail.ClassDetailViewModel" />
+    </data>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.classes.classdetail.ClassDetailActivity">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/classname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="Sınıf ismi" />
+
+                    <TextView
+                        android:id="@+id/classnametext"
+                        android:layout_below="@id/classname"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/classtable"
+                        android:layout_below="@id/classnametext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:textSize="18dp"
+                        android:text="Tablolar" />
+
+                    <TextView
+                        android:id="@+id/classtabletext"
+                        android:layout_below="@id/classtable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/classproficiency"
+                        android:layout_below="@id/classtabletext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:textSize="18dp"
+                        android:text="Uzmanlıklar
+Irk ve geçmişinden gelenlerin yanında aşağıdaki eşyalar ile uzmanlığın var." />
+
+                    <TextView
+                        android:id="@+id/classproficienytext"
+                        android:layout_below="@id/classproficiency"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/classequipment"
+                        android:layout_below="@id/classproficienytext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:textSize="18dp"
+                        android:text="Başlangıç Ekipmanı
+Geçmişinden gelenler ile birlikte bu eşyalarla başlarsın." />
+
+                    <TextView
+                        android:id="@+id/classequipmenttext"
+                        android:layout_below="@id/classequipment"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18dp"
+                        android:text="TextView" />
+
+                    <TextView
+                        android:id="@+id/classdetail"
+                        android:layout_below="@+id/classequipmenttext"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:textStyle="bold"
+                        android:layout_marginTop="15dp"
+                        android:textSize="18dp"
+                        android:text="Sınıf Özellikleri" />
+
+                    <TextView
+                        android:id="@+id/classdetailtext"
+                        android:layout_below="@id/classdetail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="#000"
+                        android:layout_marginTop="5dp"
+                        android:textSize="18dp"
+                        android:text="TextView" />
+                </RelativeLayout>
+            </LinearLayout>
+        </ScrollView>
+    </RelativeLayout>
+</layout>
