@@ -6,6 +6,7 @@ import android.view.View
 import com.e.a5eceviri.ui.backgrounds.backgroundlist.BackgroundActivity
 import com.e.a5eceviri.ui.base.BaseViewModel
 import com.e.a5eceviri.ui.classes.classlist.ClassActivity
+import com.e.a5eceviri.ui.feats.featlist.FeatActivity
 import com.e.a5eceviri.ui.races.RaceActivity
 
 class MainViewModel : BaseViewModel() {
@@ -28,5 +29,9 @@ class MainViewModel : BaseViewModel() {
     fun gecmis(v:View){
         var context = v.context
         context.startActivity(Intent(context,BackgroundActivity::class.java))
+    }
+    fun huner(v:View){
+        var context = v.context
+        context.startActivity(Intent(context,FeatActivity::class.java))
     }
 }

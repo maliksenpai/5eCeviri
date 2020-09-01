@@ -73,15 +73,16 @@
             android:layout_height="wrap_content"
             android:text="Eşyalar" />
         <Button
-            android:id="@+id/mainmenu1"
+            android:id="@+id/mainfeat"
             android:layout_below="@+id/mainbackground"
             android:layout_marginLeft="100dp"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
             android:textColor="#fff"
             android:layout_width="wrap_content"
+            android:onClick="@{(v)->viewModel.huner(v)}"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Hünerler" />
         <Button
             android:id="@+id/mainmenu2"
             android:layout_below="@+id/mainitems"

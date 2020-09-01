@@ -11,7 +11,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.backgrounds.backgrounddetail.BackgroundDetailActivity"></activity>
+        <activity android:name=".ui.feats.featdetail.FeatDetailActivity"></activity>
+        <activity android:name=".ui.feats.featlist.FeatActivity" />
+        <activity android:name=".ui.backgrounds.backgrounddetail.BackgroundDetailActivity" />
         <activity android:name=".ui.backgrounds.backgroundlist.BackgroundActivity" />
         <activity android:name=".ui.classes.classdetail.ClassDetailActivity" />
         <activity android:name=".ui.races.RaceActivity" />
