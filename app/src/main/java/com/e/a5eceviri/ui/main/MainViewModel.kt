@@ -1,13 +1,12 @@
 package com.e.a5eceviri.ui.main
 
 import android.content.Intent
-import android.util.Log
 import android.view.View
 import com.e.a5eceviri.ui.backgrounds.backgroundlist.BackgroundActivity
 import com.e.a5eceviri.ui.base.BaseViewModel
 import com.e.a5eceviri.ui.classes.classlist.ClassActivity
 import com.e.a5eceviri.ui.feats.featlist.FeatActivity
-import com.e.a5eceviri.ui.races.RaceActivity
+import com.e.a5eceviri.ui.races.racelist.RaceActivity
 
 class MainViewModel : BaseViewModel() {
     override fun init() {
@@ -16,7 +15,7 @@ class MainViewModel : BaseViewModel() {
 
     fun irklar(v: View){
         var context = v.context
-        context.startActivity(Intent(context,RaceActivity::class.java))
+        context.startActivity(Intent(context, RaceActivity::class.java))
     }
     fun sınıflar(v:View){
         var context = v.context
