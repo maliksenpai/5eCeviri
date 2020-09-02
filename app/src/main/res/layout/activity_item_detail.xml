@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="modelView"
+            type="com.e.a5eceviri.ui.items.itemdetail.ItemDetailViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+                <TextView
+                    android:id="@+id/itemname"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="İsim" />
+
+                <TextView
+                    android:id="@+id/itemnametext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/itemrarity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000"
+                    android:textStyle="bold"
+                    android:textSize="18dp"
+                    android:text="Nadirlik" />
+
+                <TextView
+                    android:id="@+id/itemraritytext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:text="TextView" />
+
+                <TextView
+                    android:id="@+id/itemdesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:text="Özellikler" />
+
+                <TextView
+                    android:id="@+id/itemdesctext"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:textColor="#000"
+                    android:textSize="18dp"
+                    android:text="TextView" />
+            </LinearLayout>
+        </ScrollView>
+
+
+    </LinearLayout>
+</layout>

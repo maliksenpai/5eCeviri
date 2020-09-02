@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="modelView"
+            type="com.e.a5eceviri.ui.items.itemslist.ItemViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/searchitem"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="15dp"
+            android:text="@={modelView.string}"
+            android:hint="Esya ismi"
+            android:inputType="textPersonName" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itemlist"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:itemCount="28"
+            tools:listitem="@layout/class_items" />
+    </LinearLayout>
+</layout>

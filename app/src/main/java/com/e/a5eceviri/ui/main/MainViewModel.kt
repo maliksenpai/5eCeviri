@@ -6,6 +6,7 @@ import com.e.a5eceviri.ui.backgrounds.backgroundlist.BackgroundActivity
 import com.e.a5eceviri.ui.base.BaseViewModel
 import com.e.a5eceviri.ui.classes.classlist.ClassActivity
 import com.e.a5eceviri.ui.feats.featlist.FeatActivity
+import com.e.a5eceviri.ui.items.itemslist.ItemsActivity
 import com.e.a5eceviri.ui.races.racelist.RaceActivity
 
 class MainViewModel : BaseViewModel() {
@@ -23,7 +24,8 @@ class MainViewModel : BaseViewModel() {
             ClassActivity::class.java))
     }
     fun esyalar(v:View){
-
+        var context = v.context
+        context.startActivity(Intent(context, ItemsActivity::class.java))
     }
     fun gecmis(v:View){
         var context = v.context
