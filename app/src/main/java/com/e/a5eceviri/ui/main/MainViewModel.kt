@@ -8,6 +8,7 @@ import com.e.a5eceviri.ui.classes.classlist.ClassActivity
 import com.e.a5eceviri.ui.feats.featlist.FeatActivity
 import com.e.a5eceviri.ui.items.itemslist.ItemsActivity
 import com.e.a5eceviri.ui.races.racelist.RaceActivity
+import com.e.a5eceviri.ui.spells.spellfiltre.SpellFiltreActivity
 
 class MainViewModel : BaseViewModel() {
     override fun init() {
@@ -34,5 +35,9 @@ class MainViewModel : BaseViewModel() {
     fun huner(v:View){
         var context = v.context
         context.startActivity(Intent(context,FeatActivity::class.java))
+    }
+    fun buyu(v:View){
+        var context = v.context
+        context.startActivity(Intent(context,SpellFiltreActivity::class.java))
     }
 }

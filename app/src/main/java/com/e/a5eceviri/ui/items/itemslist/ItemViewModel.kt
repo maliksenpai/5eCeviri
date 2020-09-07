@@ -31,7 +31,6 @@ class ItemViewModel: BaseViewModel() {
     }
 
     fun listspefic(item:String,json:InputStream){
-        Log.d("gelen",item)
         var itemlist:MutableList<String> = arrayListOf()
         var string = getJsonFromAssets().getjson(json)
         var items : Items = Gson().fromJson(string, Items::class.java)

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android">
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
     <data>
         <variable
             name="viewModel"
@@ -11,17 +12,23 @@
         android:layout_height="match_parent">
 
         <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:srcCompat="@drawable/faviconbig"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="20dp"
+            android:layout_above="@+id/maintext"/>
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="200dp"
-            android:gravity="center"
+            android:layout_above="@+id/center"
+            android:gravity="right"
             android:id="@+id/maintext"
+            android:textSize="25dp"
+            android:textStyle="bold"
             android:textColor="#000"
-            android:text="5eÇeviri \n Dungeon and Dragons Türkçe Rehber" />
+            android:text="5e Türkçe" />
 
         <Button
             android:id="@+id/mainrace"
@@ -30,7 +37,8 @@
             android:layout_below="@+id/maintext"
             android:onClick="@{(v)->viewModel.irklar(v)}"
             android:layout_marginTop="30dp"
-            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/center"
             android:background="@color/colorPrimary"
             android:textColor="#fff"
             android:text="Irklar" />
@@ -39,9 +47,9 @@
             android:id="@+id/mainclass"
             android:layout_width="wrap_content"
             android:layout_below="@+id/maintext"
-            android:onClick="@{(v) -> viewModel.sınıflar(v)}"
-            android:layout_toRightOf="@id/mainrace"
             android:layout_marginLeft="20dp"
+            android:onClick="@{(v) -> viewModel.sınıflar(v)}"
+            android:layout_toRightOf="@id/center"
             android:background="@color/colorPrimary"
             android:textColor="#fff"
             android:layout_marginTop="30dp"
@@ -51,7 +59,8 @@
         <Button
             android:id="@+id/mainbackground"
             android:layout_below="@+id/mainclass"
-            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/center"
             android:layout_marginTop="20dp"
             android:onClick="@{(v)->viewModel.gecmis(v)}"
             android:background="@color/colorPrimary"
@@ -63,9 +72,9 @@
         <Button
             android:id="@+id/mainitems"
             android:layout_below="@+id/mainrace"
-            android:onClick="@{(v)->viewModel.esyalar(v)}"
-            android:layout_toRightOf="@id/mainbackground"
             android:layout_marginLeft="20dp"
+            android:onClick="@{(v)->viewModel.esyalar(v)}"
+            android:layout_toRightOf="@id/center"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
             android:textColor="#fff"
@@ -75,7 +84,8 @@
         <Button
             android:id="@+id/mainfeat"
             android:layout_below="@+id/mainbackground"
-            android:layout_marginLeft="100dp"
+            android:layout_marginRight="20dp"
+            android:layout_toLeftOf="@+id/center"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
             android:textColor="#fff"
@@ -86,14 +96,24 @@
         <Button
             android:id="@+id/mainmenu2"
             android:layout_below="@+id/mainitems"
-            android:layout_toRightOf="@id/mainbackground"
             android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/center"
             android:layout_marginTop="20dp"
             android:background="@color/colorPrimary"
             android:textColor="#fff"
+            android:onClick="@{(v)->viewModel.buyu(v)}"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Button" />
+            android:text="Büyüler" />
+
+        <TextView
+            android:id="@+id/center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="100dp"
+            android:text="" />
 
     </RelativeLayout>
 </layout>

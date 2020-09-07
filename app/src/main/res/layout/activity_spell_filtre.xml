@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="modelView"
+            type="com.e.a5eceviri.ui.spells.spellfiltre.SpellFiltreViewModel" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ems="10"
+            android:textSize="15dp"
+            android:inputType="textPersonName"
+            android:hint="İsim"
+            android:text="@={modelView.name}" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:text="Büyü Seviyesi" />
+
+        <Spinner
+            android:id="@+id/levelfiltre"
+            android:onItemSelected="@{(parent,view,pos,id)->modelView.levelonSelectItem(parent,view,pos,id)}"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:text="Sınıf" />
+
+        <Spinner
+            android:id="@+id/classfiltre"
+            android:onItemSelected="@{(parent,view,pos,id)->modelView.classonSelectItem(parent,view,pos,id)}"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#000"
+            android:textSize="15dp"
+            android:textStyle="bold"
+            android:layout_marginTop="15dp"
+            android:text="Okul" />
+
+        <Spinner
+            android:id="@+id/schoolfiltre"
+            android:onItemSelected="@{(parent,view,pos,id)->modelView.schoolonSelectItem(parent,view,pos,id)}"
+            android:spinnerMode="dropdown"
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <Button
+            android:id="@+id/search"
+            android:layout_marginTop="15dp"
+            android:onClick="@{(v) -> modelView.button(v)}"
+            android:layout_width="match_parent"
+            android:background="@color/colorPrimary"
+            android:textColor="#fff"
+            android:layout_height="wrap_content"
+            android:text="Ara" />
+    </LinearLayout>
+</layout>
